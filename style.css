@@ -1,0 +1,78 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+body{
+	height:100vh;
+	width:100vw;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+.calc-body{
+	padding:2rem;
+	background:black;
+	display:flex;
+	flex-basis:40%;
+	margin-top:10%;
+	border-radius: 25px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: -8px 8px rgb(240, 156, 0);
+}
+.display{
+	padding:0 2rem;
+	font-size: 2rem;
+	font-weight:bold;
+	display:flex;
+	justify-content: end;
+	align-items: center;
+	min-height:5rem;
+	background:white;
+	width:95%;
+	margin:2rem;
+	border-radius: 15px;
+}
+.buttons{
+	margin:2rem 0;
+	display:grid;
+	grid-template-columns: repeat(4,1fr);
+}
+.num, .opp, .fin, .decimal{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.7rem;
+	font-weight:bold;
+	color:black;
+	background:white;
+	min-height:4.5rem;
+	width:4.5rem;
+	border-radius:50%;
+	margin:.7rem;
+	box-shadow: 0 3px #999;
+}
+.num:active, .opp:active, .fin:active, .decimal:active{
+	transform: translateY(4px);
+	box-shadow: 0 2px #666;
+}
+.num:hover, .opp:hover, .fin:hover, .decimal:hover{
+	cursor: pointer;
+}
+@media screen and (max-width:600px){
+	.calc-body{
+		margin:0;
+		padding:1rem;
+		width:100vw;
+		height:100vh;
+		border-radius:0;
+	}
+	.num,.opp,.fin{
+		height:3rem;
+		width:3rem;
+		font-size:1rem;
+	}
+}
